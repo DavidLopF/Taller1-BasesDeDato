@@ -6,5 +6,7 @@ class Writer:
         pass
 
 
+
+
 def createDirectory(groupName: str):
-    os.makedirs(os.path.join(os.environ["HOMEPATH"], "Desktop")+ "/" + groupName)
+    os.makedirs(os.path.join(os.environ["HOMEPATH"], "Desktop") + "/" + groupName)
