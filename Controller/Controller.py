@@ -1,5 +1,6 @@
-from Model.Writer import createDirectory, moveDirectory , moveDirectoryMain
+from Model.Writer import createDirectory, moveDirectory, moveDirectoryMain
 from View.View import printConsole, captureInt, printMenu
+from Model.Reader import knowBytes, listDirectory
 
 
 class Contoller:
@@ -10,20 +11,20 @@ class Contoller:
 printConsole("..::: BIENVENIDO :::...")
 
 
-def selecOptionMenu():
+def selectOptionMenu():
     option = int(printMenu())
     if option == 1:
 
-         if createDirectory("G_BD-2"):
-             printConsole("\n______________________________________________________________________\n")
-             printConsole("CREANDO CARPETA ESPERE UN MOMENTO....")
-             printConsole("CARPETA CREADA CON EXITO :)\n")
-             printConsole("______________________________________________________________________")
-         else:
-                printConsole("\n______________________________________________________________________\n")
-                printConsole("LA CARPETA YA HA SIDO CREADA....\n\n")
-                printConsole("\n______________________________________________________________________")
-                selecOptionMenu()
+        if createDirectory("G_BD-2"):
+            printConsole("\n______________________________________________________________________\n")
+            printConsole("CREANDO CARPETA ESPERE UN MOMENTO....")
+            printConsole("CARPETA CREADA CON EXITO :)\n")
+            printConsole("______________________________________________________________________")
+        else:
+            printConsole("\n______________________________________________________________________\n")
+            printConsole("LA CARPETA YA HA SIDO CREADA....\n\n")
+            printConsole("\n______________________________________________________________________")
+            selectOptionMenu()
 
 
     elif option == 2:
@@ -31,7 +32,7 @@ def selecOptionMenu():
             printConsole("\n______________________________________________________________________\n")
             printConsole("MOVIENDO TXT A CARPETA DEL ESCRITORIO....")
             printConsole("\n______________________________________________________________________\n")
-            selecOptionMenu()
+            selectOptionMenu()
         else:
             printConsole("LA CARPETA YA SE ECUENTRA EN EL ESCRITORIO\n" +
                          '¿ DESEA DEJARLA AHI O MOVERLA AL DIRECTORIO RAIZ DEL PROGRAMA ?' +
@@ -44,8 +45,20 @@ def selecOptionMenu():
                 printConsole("\n______________________________________________________________________\n")
                 printConsole("MOVIENDO TXT A CARPETA RAIZ DEL PROGRAMA....")
                 printConsole("\n______________________________________________________________________\n")
-                selecOptionMenu()
+                selectOptionMenu()
             else:
-               selecOptionMenu()
+                selectOptionMenu()
 
-selecOptionMenu()
+    elif option == 3:
+        printConsole("\n______________________________________________________________________\n")
+        printConsole("LISTA DEL DIRECTORIO G_BD-2 :\n" + str(listDirectory()))
+        printConsole("\n______________________________________________________________________\n")
+        selectOptionMenu()
+    elif option == 4:
+        printConsole("\n______________________________________________________________________\n")
+        printConsole(knowBytes() + '\n')
+        printConsole("\n______________________________________________________________________\n")
+        selectOptionMenu()
+
+
+selectOptionMenu()

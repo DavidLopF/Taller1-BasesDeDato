@@ -25,6 +25,5 @@ def moveDirectory():
 
 
 def moveDirectoryMain():
-
     shutil.move(os.path.join(os.environ["HOMEPATH"], "Desktop") + "/" + 'G_BD-2' + '/archivo-1.txt',
                 '../Resources')
