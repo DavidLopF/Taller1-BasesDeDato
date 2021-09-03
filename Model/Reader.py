@@ -1,7 +1,7 @@
 import os
 
 
-class Reader():
+class Reader:
     def __init__(self):
         pass
 
