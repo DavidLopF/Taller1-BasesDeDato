@@ -1,7 +1,5 @@
 import os
-import pathlib
 import shutil
-
 
 class Writer:
     def __init__(self):

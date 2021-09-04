@@ -14,7 +14,7 @@ class Controller:
         option = int(printMenu())
         if option == 1:
 
-            if self.writer.createDirectory(self.writer, "G_BD-2"):
+            if self.writer.createDirectory("G_BD-2"):
                 printConsole("\n______________________________________________________________________\n")
                 printConsole("CREANDO CARPETA ESPERE UN MOMENTO....")
                 printConsole("CARPETA CREADA CON EXITO :)\n")
@@ -26,7 +26,7 @@ class Controller:
                 self.selectOptionMenu()
 
         elif option == 2:
-            if moveDirectory():
+            if self.writer.moveDirectory():
                 printConsole("\n______________________________________________________________________\n")
                 printConsole("MOVIENDO TXT A CARPETA DEL ESCRITORIO....")
                 printConsole("\n______________________________________________________________________\n")

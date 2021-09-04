@@ -6,11 +6,11 @@ class Reader:
         pass
 
 
-    def listDirectory():
+    def listDirectory(self):
             return os.listdir(os.path.join(os.environ["HOMEPATH"], "Desktop") + "/" + 'G_BD-2')
 
 
-    def knowBytes():
+    def knowBytes(self):
             if os.path.exists(os.path.join(os.environ["HOMEPATH"], "Desktop") + "/" + 'G_BD-2' + '/archivo-1.txt'):
 
                 x = str(os.path.getsize(os.path.join(os.environ["HOMEPATH"], "Desktop") + "/" + 'G_BD-2' + '/archivo-1.txt'))
