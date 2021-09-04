@@ -1,3 +1,3 @@
-from Controller.Controller import Contoller
+from Controller import Controller
 
 c = Controller()
