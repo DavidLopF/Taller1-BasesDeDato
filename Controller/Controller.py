@@ -1,6 +1,6 @@
+from Model.Reader import *
 from Model.Writer import *
 from View.View import *
-from Model.Reader import *
 
 
 class Controller:
@@ -55,5 +55,22 @@ class Controller:
         elif option == 4:
             printConsole("\n______________________________________________________________________\n")
             printConsole(self.reader.knowBytes() + '\n')
+            printConsole("\n______________________________________________________________________\n")
+            self.selectOptionMenu()
+
+        elif option == 5:
+            printConsole("\n______________________________________________________________________\n")
+            printConsole("EL ARCHIVO TIENE: " + str(self.reader.knwoNumberLines()) + ' LINEAS\n')
+            printConsole("\n______________________________________________________________________\n")
+            self.selectOptionMenu()
+        elif option == 6:
+            printConsole("\n______________________________________________________________________\n")
+            printConsole(self.writer.copyHalf() + '\n')
+            printConsole("ARCHIVOS COPIADOS CORRECTAMENTE :)")
+            printConsole("\n______________________________________________________________________\n")
+            self.selectOptionMenu()
+        elif option == 7:
+            printConsole("\n______________________________________________________________________\n")
+            printConsole(self.writer.createTxtAZ() + '\n')
             printConsole("\n______________________________________________________________________\n")
             self.selectOptionMenu()
